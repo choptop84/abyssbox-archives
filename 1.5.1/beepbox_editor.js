@@ -60376,13 +60376,6 @@ You should be redirected to the song at:<br /><br />
                     document.getElementById('text-content').style.display = this._doc.prefs.showDescription ? "" : "none";
                 if (!isMobile) {
                     this._playPauseAreaMobile.style.display = "none";
-                    if (window.localStorage.getItem("tutorialComplete") != "true") ;
-                    if (window.localStorage.getItem("curVer") != "1.5.1") {
-                        window.localStorage.setItem("updateSeen", "false");
-                    }
-                    if (window.localStorage.getItem("updateSeen") != "true") {
-                        this._openPrompt("newUpdate");
-                    }
                     if (this._doc.getFullScreen()) {
                         const semitoneHeight = this._patternEditorRow.clientHeight / this._doc.getVisiblePitchCount();
                         const targetBeatWidth = semitoneHeight * 5;
